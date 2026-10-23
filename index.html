@@ -49,10 +49,12 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
   background-size:34px 34px,34px 34px;background-position:0 0,17px 17px;
   -webkit-mask-image:radial-gradient(ellipse 55% 70% at 78% 40%,#000 0,transparent 70%);mask-image:radial-gradient(ellipse 55% 70% at 78% 40%,#000 0,transparent 70%)}
 .hero .wrap{position:relative;padding-bottom:9vh;padding-top:140px;width:100%}
-.hero h1{font-size:clamp(2.8rem,7vw,6rem);max-width:12ch;font-weight:400}
+.hero h1{font-size:clamp(2.8rem,6vw,5.4rem);max-width:11ch;font-weight:400}
 .hero h1 em{font-style:italic;color:var(--gold2)}
 .hero p.lead{max-width:46ch;margin:1.6rem 0 2.2rem;color:rgba(255,255,255,.78);font-size:1.05rem}
 .hero .row{display:flex;gap:1rem;flex-wrap:wrap}
+.heroimg{position:absolute;right:max(24px,calc((100vw - 1180px)/2 + 24px));bottom:9vh;width:min(32vw,380px);aspect-ratio:3/4.4;border-radius:999px 999px 0 0;overflow:hidden;border:1px solid rgba(216,189,138,.6);outline:1px solid rgba(216,189,138,.25);outline-offset:12px}
+.heroimg img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
 .scroll{position:absolute;right:24px;bottom:9vh;writing-mode:vertical-rl;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 
 /* strip */
@@ -79,17 +81,21 @@ section{padding:110px 0}
 .show .head p{color:rgba(255,255,255,.65)}
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
 .tile{position:relative;overflow:hidden;min-height:300px;display:flex;align-items:flex-end;padding:1.4rem;background:linear-gradient(160deg,#2a251f,#17140f)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;transition:transform .8s}.tile:hover img{transform:scale(1.04)}.tile.ph::after{display:none}
+.tile.has::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,8,6,.78),rgba(10,8,6,0) 55%)}
+.tile.has::before{display:none}
 .tile::before{content:"";position:absolute;inset:0;opacity:.5;background-image:radial-gradient(circle,rgba(255,255,255,.85) 0 1.2px,transparent 2px),radial-gradient(circle,rgba(216,189,138,.7) 0 1px,transparent 2px);background-size:26px 26px,26px 26px;background-position:0 0,13px 13px;-webkit-mask-image:linear-gradient(200deg,#000,transparent 70%);mask-image:linear-gradient(200deg,#000,transparent 70%)}
 .tile.v2::before{background-size:18px 18px,18px 18px;background-position:0 0,9px 9px}
-.tile.v3{background:linear-gradient(160deg,#efe6d8,#d9c8ab);color:var(--ink)}
+
 .tile.v3::before{opacity:.35;background-image:radial-gradient(circle,#fff 0 1.4px,transparent 2.4px)}
-.tile span{position:relative;font-family:'Cormorant Garamond',serif;font-size:1.5rem}
+.tile span{position:relative;z-index:2;color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.5rem}
 .tile small{position:relative;display:block;font-family:'Jost';font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;opacity:.7;margin-bottom:.3rem}
 .t1{grid-column:span 5;min-height:460px}.t2{grid-column:span 4}.t3{grid-column:span 3}.t4{grid-column:span 3}.t5{grid-column:span 4}.t6{grid-column:span 5}
 .note{margin-top:1.4rem;font-size:.82rem;color:rgba(255,255,255,.5)}
 
 /* hire */
 .hire{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.hirepic{aspect-ratio:4/3.4;overflow:hidden;margin-bottom:2rem}.hirepic img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
 .hire ul{list-style:none;margin:1.6rem 0 2rem}
 .hire li{padding:.9rem 0;border-bottom:1px solid var(--line);display:flex;gap:1rem;align-items:baseline;color:var(--muted)}
 .hire li b{font-weight:400;color:var(--ink);min-width:9.5rem;font-family:'Cormorant Garamond',serif;font-size:1.25rem}
@@ -134,6 +140,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem
   .t1,.t2,.t3,.t4,.t5,.t6{grid-column:span 6;min-height:260px}
   .t1{grid-column:span 12}
 }
+@media(max-width:960px){.heroimg{position:relative;right:auto;bottom:auto;width:min(70vw,300px);margin:0 auto 7vh}.hero{flex-direction:column;justify-content:flex-end}.hero .wrap{padding-bottom:4vh;order:1}.heroimg{order:2}}
 @media(max-width:700px){
   section{padding:76px 0}
   .links{display:none;position:absolute;top:74px;left:0;right:0;background:var(--paper);color:var(--ink);flex-direction:column;padding:1.6rem 24px;gap:1.3rem;border-bottom:1px solid var(--line)}
@@ -174,6 +181,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem
       <a class="btn light" href="#hire">Gowns for hire</a>
     </div>
   </div>
+  <div class="heroimg"><img src="img/dv02.jpg" alt="Bride in a veil and lace ballgown by Dyna Vence"></div>
   <div class="scroll">Scroll</div>
 </header>
 
@@ -202,23 +210,24 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem
     <div class="head">
       <p class="eyebrow" style="color:var(--gold2)">Crystal work</p>
       <h2>Detail you can see up close.</h2>
-      <p>Hand-finished beading is the signature. This gallery shows how your own photography will be laid out on the live site.</p>
+      <p>Hand-finished beading is the signature. Gowns, beading and brides, in one gallery.</p>
     </div>
     <div class="grid">
-      <div class="tile t1"><span><small>Bridal</small>2025 brides</span></div>
-      <div class="tile v2 t2"><span><small>Detail</small>Crystal beading</span></div>
-      <div class="tile v3 t3"><span><small>Accessories</small>Veils</span></div>
-      <div class="tile v3 t4"><span><small>Style</small>Celebrity looks</span></div>
-      <div class="tile t5"><span><small>Evening</small>Gowns and red carpet</span></div>
-      <div class="tile v2 t6"><span><small>In the press</small>Media features</span></div>
+      <div class="tile has t1"><img src="img/dv02.jpg" alt="Bride in a lace ballgown and veil"><span><small>Bridal</small>Veils and ballgowns</span></div>
+      <div class="tile has t2"><img src="img/dv03.jpg" alt="Hand-beaded crystal bodice detail" style="object-position:50% 40%"><span><small>Detail</small>Crystal beading</span></div>
+      <div class="tile has t3"><img src="img/dv04.jpg" alt="Black velvet mermaid gown with beaded corset"><span><small>Evening</small>Mermaid gowns</span></div>
+      <div class="tile has t4"><img src="img/dv05.jpg" alt="Beaded fringe gown with sculpted shoulders"><span><small>Red carpet</small>Beaded fringe</span></div>
+      <div class="tile has t5"><img src="img/dv06.jpg" alt="White ballgown with black bow trim"><span><small>Statement</small>Bow ballgown</span></div>
+      <div class="tile has t6"><img src="img/dv10.jpg" alt="Couple at a floral wedding, bride in a satin ballgown" style="object-position:50% 40%"><span><small>Real weddings</small>Brides in Dyna Vence</span></div>
     </div>
-    <p class="note">Placeholder panels. The real gallery uses the brand's own photos, grouped as above.</p>
+    <p class="note">Photos from @dyna_vence on Instagram.</p>
   </div>
 </section>
 
 <section id="hire">
   <div class="wrap hire">
     <div>
+      <div class="hirepic"><img src="img/dv09.jpg" alt="White ballgown with black bow trim"></div>
       <p class="eyebrow">Gowns for hire</p>
       <h2 style="font-size:clamp(2.1rem,4.4vw,3.4rem);margin:.7rem 0 1rem">Not ready to commission? Hire the gown.</h2>
       <p style="color:var(--muted)">Reserve a hire gown for your date and come in to try it on. Tell us the date and style and we reply on WhatsApp with what is available.</p>

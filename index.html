@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dyna Vence Couture | Bridal gowns, custom and for hire</title>
+<meta name="description" content="Custom wedding gowns, gowns for hire and luxury occasion wear. Concept website by Rendra Digital Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141210;--ink2:#1d1a17;--ivory:#f6f1ea;--paper:#fbf8f3;--gold:#b8955a;--gold2:#d8bd8a;--muted:#6f675d;--line:rgba(20,18,16,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;font-weight:300;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.1;letter-spacing:.005em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.7rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:400;border:1px solid var(--gold);color:var(--ink);background:transparent;cursor:pointer;transition:.25s;font-family:inherit}
+.btn:hover{background:var(--gold);color:#fff}
+.btn.solid{background:var(--gold);color:#fff}
+.btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+.btn.light{color:#fff;border-color:rgba(255,255,255,.5)}
+.btn.light:hover{background:#fff;color:var(--ink)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;color:#fff}
+nav.solid{background:rgba(251,248,243,.94);backdrop-filter:blur(10px);color:var(--ink);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:.8rem}
+.mono{width:40px;height:40px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:1.05rem;letter-spacing:.02em}
+.logo b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.25rem;letter-spacing:.14em;text-transform:uppercase}
+.links{display:flex;gap:2rem;align-items:center;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase}
+.links a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:0;color:inherit;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-family:inherit;cursor:pointer}
+
+/* hero */
+.hero{position:relative;min-height:100vh;color:#fff;display:flex;align-items:flex-end;overflow:hidden;background:
+  radial-gradient(1200px 700px at 78% 18%,rgba(216,189,138,.22),transparent 60%),
+  radial-gradient(900px 600px at 10% 90%,rgba(184,149,90,.16),transparent 60%),
+  linear-gradient(160deg,#1b1815 0%,#0f0d0b 100%)}
+.beads{position:absolute;inset:0;opacity:.55;background-image:
+  radial-gradient(circle at 50% 50%,rgba(255,255,255,.9) 0 1.4px,transparent 2.2px),
+  radial-gradient(circle at 50% 50%,rgba(216,189,138,.7) 0 1px,transparent 2px);
+  background-size:34px 34px,34px 34px;background-position:0 0,17px 17px;
+  -webkit-mask-image:radial-gradient(ellipse 55% 70% at 78% 40%,#000 0,transparent 70%);mask-image:radial-gradient(ellipse 55% 70% at 78% 40%,#000 0,transparent 70%)}
+.hero .wrap{position:relative;padding-bottom:9vh;padding-top:140px;width:100%}
+.hero h1{font-size:clamp(2.8rem,7vw,6rem);max-width:12ch;font-weight:400}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hero p.lead{max-width:46ch;margin:1.6rem 0 2.2rem;color:rgba(255,255,255,.78);font-size:1.05rem}
+.hero .row{display:flex;gap:1rem;flex-wrap:wrap}
+.scroll{position:absolute;right:24px;bottom:9vh;writing-mode:vertical-rl;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+
+/* strip */
+.strip{background:var(--ink);color:#fff;padding:1.1rem 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.08)}
+.strip .wrap{display:flex;gap:2.6rem;justify-content:space-between;flex-wrap:wrap;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.strip span::before{content:"\25C6";color:var(--gold);margin-right:.8rem;font-size:.6rem}
+
+section{padding:110px 0}
+.head{max-width:640px;margin-bottom:56px}
+.head h2{font-size:clamp(2.1rem,4.4vw,3.4rem);margin:.7rem 0 1rem}
+.head p{color:var(--muted)}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc{background:var(--paper);padding:2.4rem 1.8rem;transition:.3s;min-height:290px;display:flex;flex-direction:column}
+.svc:hover{background:#fff}
+.svc .n{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);letter-spacing:.12em}
+.svc h3{font-size:1.75rem;margin:1.4rem 0 .8rem}
+.svc p{color:var(--muted);font-size:.95rem;margin-bottom:auto}
+.svc a{margin-top:1.6rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+
+/* showcase */
+.show{background:var(--ink2);color:#fff}
+.show .head p{color:rgba(255,255,255,.65)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.tile{position:relative;overflow:hidden;min-height:300px;display:flex;align-items:flex-end;padding:1.4rem;background:linear-gradient(160deg,#2a251f,#17140f)}
+.tile::before{content:"";position:absolute;inset:0;opacity:.5;background-image:radial-gradient(circle,rgba(255,255,255,.85) 0 1.2px,transparent 2px),radial-gradient(circle,rgba(216,189,138,.7) 0 1px,transparent 2px);background-size:26px 26px,26px 26px;background-position:0 0,13px 13px;-webkit-mask-image:linear-gradient(200deg,#000,transparent 70%);mask-image:linear-gradient(200deg,#000,transparent 70%)}
+.tile.v2::before{background-size:18px 18px,18px 18px;background-position:0 0,9px 9px}
+.tile.v3{background:linear-gradient(160deg,#efe6d8,#d9c8ab);color:var(--ink)}
+.tile.v3::before{opacity:.35;background-image:radial-gradient(circle,#fff 0 1.4px,transparent 2.4px)}
+.tile span{position:relative;font-family:'Cormorant Garamond',serif;font-size:1.5rem}
+.tile small{position:relative;display:block;font-family:'Jost';font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;opacity:.7;margin-bottom:.3rem}
+.t1{grid-column:span 5;min-height:460px}.t2{grid-column:span 4}.t3{grid-column:span 3}.t4{grid-column:span 3}.t5{grid-column:span 4}.t6{grid-column:span 5}
+.note{margin-top:1.4rem;font-size:.82rem;color:rgba(255,255,255,.5)}
+
+/* hire */
+.hire{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.hire ul{list-style:none;margin:1.6rem 0 2rem}
+.hire li{padding:.9rem 0;border-bottom:1px solid var(--line);display:flex;gap:1rem;align-items:baseline;color:var(--muted)}
+.hire li b{font-weight:400;color:var(--ink);min-width:9.5rem;font-family:'Cormorant Garamond',serif;font-size:1.25rem}
+.card{background:#fff;border:1px solid var(--line);padding:2.4rem}
+.card h3{font-size:2rem;margin-bottom:.4rem}
+.card p.s{color:var(--muted);font-size:.92rem;margin-bottom:1.4rem}
+label{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:1rem 0 .35rem}
+input,select,textarea{width:100%;padding:.85rem 1rem;border:1px solid var(--line);background:var(--paper);font:inherit;font-size:.95rem;color:var(--ink);border-radius:0}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold2);outline-offset:1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card .btn{width:100%;justify-content:center;margin-top:1.5rem}
+
+/* process */
+.process{background:var(--ivory)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:s}
+.step{border-top:1px solid var(--gold);padding-top:1.4rem}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.3rem}
+.step h3{font-size:1.6rem;margin:.6rem 0 .6rem}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* faq */
+.faq{max-width:760px}
+details{border-bottom:1px solid var(--line);padding:1.25rem 0}
+summary{cursor:pointer;list-style:none;font-family:'Cormorant Garamond',serif;font-size:1.45rem;display:flex;justify-content:space-between;gap:1rem}
+summary::after{content:"+";color:var(--gold);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{color:var(--muted);margin-top:.8rem;max-width:60ch}
+
+/* contact */
+.contact{background:var(--ink);color:#fff;text-align:center}
+.contact h2{font-size:clamp(2.2rem,5vw,4rem);max-width:16ch;margin:1rem auto 1.4rem}
+.contact p{color:rgba(255,255,255,.7);max-width:48ch;margin:0 auto 2.2rem}
+.socials{margin-top:2.4rem;display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.socials a:hover{color:var(--gold2)}
+footer{background:#0c0b09;color:rgba(255,255,255,.45);font-size:.78rem;padding:1.6rem 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+
+@media(max-width:960px){
+  .services{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .hire{grid-template-columns:1fr;gap:40px}
+  .t1,.t2,.t3,.t4,.t5,.t6{grid-column:span 6;min-height:260px}
+  .t1{grid-column:span 12}
+}
+@media(max-width:700px){
+  section{padding:76px 0}
+  .links{display:none;position:absolute;top:74px;left:0;right:0;background:var(--paper);color:var(--ink);flex-direction:column;padding:1.6rem 24px;gap:1.3rem;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .menu{display:block}
+  .services,.steps{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .scroll{display:none}
+  .t2,.t3,.t4,.t5,.t6{grid-column:span 12}
+  .hire li{flex-direction:column;gap:.2rem}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="mono">DV</span><b>Dyna Vence</b></a>
+    <button class="menu" id="menu" aria-expanded="false">Menu</button>
+    <div class="links" id="links">
+      <a href="#services">Gowns</a>
+      <a href="#work">Crystal work</a>
+      <a href="#hire">Hire</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn solid" style="padding:.7rem 1.2rem" href="#book">Book a fitting</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="beads"></div>
+  <div class="wrap">
+    <p class="eyebrow">Dyna Vence Couture</p>
+    <h1 style="margin-top:1rem">Your wedding gown, made <em>for you</em> or hired for the day.</h1>
+    <p class="lead">Custom bridal gowns, crystal beading, veils and luxury occasion wear. Book a fitting and talk to the designer directly on WhatsApp.</p>
+    <div class="row">
+      <a class="btn solid" href="#book">Book a fitting</a>
+      <a class="btn light" href="#hire">Gowns for hire</a>
+    </div>
+  </div>
+  <div class="scroll">Scroll</div>
+</header>
+
+<div class="strip"><div class="wrap">
+  <span>Custom wedding gowns</span><span>Gowns for hire</span><span>Crystal beading</span><span>Veils</span><span>Occasion wear</span>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">What we make</p>
+      <h2>Everything for the dress, in one place.</h2>
+      <p>Choose how you want to wear it. Each route starts with a conversation and ends with a gown that fits you.</p>
+    </div>
+    <div class="services">
+      <div class="svc"><span class="n">01</span><h3>Custom wedding gowns</h3><p>Designed around you: silhouette, fabric, beading and fit, with fittings along the way.</p><a href="#book">Start a custom gown</a></div>
+      <div class="svc"><span class="n">02</span><h3>Gowns for hire</h3><p>Wear a finished gown for your day. Browse what is available and reserve your date.</p><a href="#hire">See hire details</a></div>
+      <div class="svc"><span class="n">03</span><h3>Veils and details</h3><p>Veils and finishing pieces made to sit with your gown, so the whole look matches.</p><a href="#book">Ask about veils</a></div>
+      <div class="svc"><span class="n">04</span><h3>Luxury occasion wear</h3><p>Evening gowns and statement outfits for introductions, galas and red carpets.</p><a href="#book">Ask about occasion wear</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="show" id="work">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" style="color:var(--gold2)">Crystal work</p>
+      <h2>Detail you can see up close.</h2>
+      <p>Hand-finished beading is the signature. This gallery shows how your own photography will be laid out on the live site.</p>
+    </div>
+    <div class="grid">
+      <div class="tile t1"><span><small>Bridal</small>2025 brides</span></div>
+      <div class="tile v2 t2"><span><small>Detail</small>Crystal beading</span></div>
+      <div class="tile v3 t3"><span><small>Accessories</small>Veils</span></div>
+      <div class="tile v3 t4"><span><small>Style</small>Celebrity looks</span></div>
+      <div class="tile t5"><span><small>Evening</small>Gowns and red carpet</span></div>
+      <div class="tile v2 t6"><span><small>In the press</small>Media features</span></div>
+    </div>
+    <p class="note">Placeholder panels. The real gallery uses the brand's own photos, grouped as above.</p>
+  </div>
+</section>
+
+<section id="hire">
+  <div class="wrap hire">
+    <div>
+      <p class="eyebrow">Gowns for hire</p>
+      <h2 style="font-size:clamp(2.1rem,4.4vw,3.4rem);margin:.7rem 0 1rem">Not ready to commission? Hire the gown.</h2>
+      <p style="color:var(--muted)">Reserve a hire gown for your date and come in to try it on. Tell us the date and style and we reply on WhatsApp with what is available.</p>
+      <ul>
+        <li><b>Choose</b> a gown from the collection</li>
+        <li><b>Reserve</b> your wedding date</li>
+        <li><b>Fit</b> a try-on before the day</li>
+      </ul>
+      <a class="btn" href="#book">Check availability</a>
+    </div>
+    <form class="card" id="book" onsubmit="return send(event)">
+      <h3>Book a fitting</h3>
+      <p class="s">Fill this in and it opens WhatsApp with your details ready to send.</p>
+      <label for="name">Your name</label>
+      <input id="name" required placeholder="Full name">
+      <div class="two">
+        <div><label for="type">I want</label>
+          <select id="type"><option>A custom wedding gown</option><option>A gown for hire</option><option>A veil</option><option>Occasion wear</option></select></div>
+        <div><label for="date">Event date</label><input id="date" type="date"></div>
+      </div>
+      <label for="msg">Anything we should know</label>
+      <textarea id="msg" rows="3" placeholder="Style, colours, number of fittings, inspiration"></textarea>
+      <button class="btn solid" type="submit">Send on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">How it works</p>
+      <h2>From first message to the day.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Talk</h3><p>Message on WhatsApp with your date and the look you have in mind.</p></div>
+      <div class="step"><h3>Design</h3><p>Pick the silhouette, fabric and crystal work for your gown.</p></div>
+      <div class="step"><h3>Fit</h3><p>Come in for fittings so the gown sits exactly right.</p></div>
+      <div class="step"><h3>Wear</h3><p>Collect your gown, veil and details ready for the day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Questions</p><h2>Before you book.</h2></div>
+    <div class="faq">
+      <details><summary>Can I have a gown made for me?</summary><p>Yes. Custom gowns are designed around you, with fittings along the way. Message us your date and ideas to start.</p></details>
+      <details><summary>Do you hire out gowns?</summary><p>Yes. Send the date and the style you like and we reply with what is available.</p></details>
+      <details><summary>Can you match a veil to my gown?</summary><p>Yes. Veils are made to sit with the gown so the whole look matches.</p></details>
+      <details><summary>How do I get a price?</summary><p>Prices depend on the gown, fabric and beading. Share your idea on WhatsApp and you get a quote for your choice.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--gold2)">Book</p>
+    <h2>Let's make your dress.</h2>
+    <p>Send a message and tell us your date. The designer replies on WhatsApp.</p>
+    <a class="btn solid" href="https://wa.me/256772050006?text=Hello%20Dyna%20Vence%2C%20I%20would%20like%20to%20book%20a%20fitting." target="_blank" rel="noopener">Message on WhatsApp</a>
+    <div class="socials">
+      <a href="https://www.instagram.com/dyna_vence/" target="_blank" rel="noopener">Instagram @dyna_vence</a>
+      <a href="https://www.tiktok.com/@dynavence" target="_blank" rel="noopener">TikTok</a>
+      <a href="tel:+256772050006">+256 772 050006</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>&copy; Dyna Vence Couture</span><span>Website concept by Rendra Digital Studio. Not an official site.</span></div></footer>
+
+<script>
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('solid',scrollY>40);
+onScroll();addEventListener('scroll',onScroll,{passive:true});
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.addEventListener('click',()=>{const o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o);if(o)nav.classList.add('solid')});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+function send(e){e.preventDefault();
+  const n=document.getElementById('name').value.trim(),t=document.getElementById('type').value,
+  d=document.getElementById('date').value,m=document.getElementById('msg').value.trim();
+  let s='Hello Dyna Vence, my name is '+n+'. I want '+t.toLowerCase()+'.';
+  if(d)s+=' My event date is '+d+'.';
+  if(m)s+=' '+m;
+  window.open('https://wa.me/256772050006?text='+encodeURIComponent(s),'_blank');return false}
+</script>
+</body>
+</html>
